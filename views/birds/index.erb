@@ -1,0 +1,19 @@
+<div class="container">
+
+    <!-- Page Heading -->
+    <h1 class="my-4">Index of Birds</h1>
+    <a class="btn btn-primary mb-4" href="/birds/new" role="button">Create a Bird</a>
+    <div class="row">
+    	<% @birds.each do |bird| %>
+        <div class="col-lg-6 portfolio-item">
+            <div class="card h-100">
+                <a href="/birds/<%= bird.id %>"><img class="card-img-top" src="<%=bird.image%>" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="#"><%=bird.name%></a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <%end%>
+    </div>
